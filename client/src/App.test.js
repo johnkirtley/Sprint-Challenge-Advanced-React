@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { render, fireEvent } from '@testing-library/react';
-import { toBeInTheDocument } from '@testing-library/jest-dom'
+import { toBeInTheDocument } from '@testing-library/jest-dom/extend-expect';
 import App from './App';
 import Header from './components/Header'
 import PlayerList from './components/playerList';
 
+
+
+
 test('renders title', () => {
   const { getByText } = render(<Header />);
 
-  const header = getByText(/women world cup/i);
+  const header = getByText(/women's world cup/i);
 
   expect(header).toBeTruthy();
 })
@@ -35,5 +38,6 @@ test('checks for button', () => {
   expect(button).toBeTruthy();
   expect(button).toContainHTML('Click Me')
 })
+
 
 
