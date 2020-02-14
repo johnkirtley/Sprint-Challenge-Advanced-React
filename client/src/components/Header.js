@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import useLocalStorage from '../hooks/useLocalStorage'
 import Styled from 'styled-components';
 
@@ -28,6 +28,16 @@ const Header = () => {
         e.preventDefault();
         setHeaderValue(!headerValue);
     }
+
+    useEffect(() => {
+        if (headerValue === true) {
+            document.body.classList.add('new-background');
+        } else {
+            document.body.classList.remove('new-background')
+        }
+    }, [headerValue])
+
+
 
     return (
         <Container>

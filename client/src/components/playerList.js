@@ -24,7 +24,6 @@ padding: 5%;
 
 width: 12rem;
 background-color: papayawhip;
-
 `
 
 
