@@ -1,4 +1,11 @@
 - [ ] Why would you use class component over function components (removing hooks from the question)?
+  - As of now, you should always use functional components over class components.
 - [ ] Name three lifecycle methods and their purposes.
+  - componentDidMount: when first instance of component is being created. Best for fetching initial data. Comparable to the useEffect hook
+  - componentDidUpdate: Any updates that need to be rendered.
+  - componentWillUnmount: Called when component is being removed from the DOM
 - [ ] What is the purpose of a custom hook?
+  - to create your own reusable non-visual actions, instead of possibly repeating multiple blocks of code.
 - [ ] Why is it important to test our apps?
+  - To ensure everything is working as it should.
+  - Will also allow you to bring out potential edge cases.
